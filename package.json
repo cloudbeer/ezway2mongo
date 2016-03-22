@@ -1,0 +1,28 @@
+{
+  "name": "ezway2mongo",
+  "version": "0.0.1",
+  "description": "An easy way to access mongo with mongodb and yield.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloudbeer/ezway2mongo.git"
+  },
+  "keywords": [
+    "mongo",
+    "co",
+    "orm"
+  ],
+  "author": "Xie Zhengwei <iam@xiezhengwei.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cloudbeer/ezway2mongo/issues"
+  },
+  "homepage": "https://github.com/cloudbeer/ezway2mongo#readme",
+  "dependencies": {
+    "common-rest-errors": "0.0.8",
+    "mongodb": "^2.1.10"
+  }
+}
