@@ -4,22 +4,22 @@ ezmongo.connect('mongodb://10.163.11.20:27017/omd');
 
 
 setTimeout(function () {
-  // var co = ezmongo.find('order',
-  //   {buyer_name: /.*啤酒.*/},
-  //   {
-  //     skip   : 4995,
-  //     limit  : 1,
-  //     sort   : {_id: -1},
-  //     project: {_id: 1}
-  //   });
-  // co(function (err, rres) {
-  //   console.log(rres);
-  // });
-
-  var co = ezmongo.deleteOne('test');
+  var co = ezmongo.find('order',
+    {buyer_name: /.*啤酒.*/},
+    {
+      skip   : 4995,
+      limit  : 1,
+      sort   : {_id: -1},
+      project: {_id: 1}
+    });
   co(function (err, rres) {
     console.log(rres);
   });
+
+  // var co = ezmongo.deleteOne('test');
+  // co(function (err, rres) {
+  //   console.log(rres);
+  // });
   //console.log(co.next());
 
   // var co = ezmongo.insert('test', [
