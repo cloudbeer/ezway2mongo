@@ -6,7 +6,7 @@ var ezmongo = require('./lib');
 
 setTimeout(function () {
 
-  var co = ezmongo.find('brand');
+  var co = ezmongo.find('brand', null, {limit:'1'});
   co(function (err, rres) {
     console.log(rres);
   });
