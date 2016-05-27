@@ -1,20 +1,28 @@
 var ezmongo = require('./lib');
 
-ezmongo.connect('mongodb://10.163.11.20:27017/omd');
+ ezmongo.connect('mongodb://mongoadmin:docker_youku@112.74.29.211:27017/goods');
+ // ezmongo.connect('mongodb://112.74.29.211:27017/goods');
 
 
 setTimeout(function () {
-  var co = ezmongo.find('order',
-    {buyer_name: /.*啤酒.*/},
-    {
-      skip   : 4995,
-      limit  : 1,
-      sort   : {_id: -1},
-      project: {_id: 1}
-    });
+
+  var co = ezmongo.find('brand');
   co(function (err, rres) {
     console.log(rres);
   });
+  
+  //
+  // var co = ezmongo.findOne('brand',
+  //   {buyer_name: /.*啤酒.*/},
+  //   {
+  //     skip   : 4995,
+  //     limit  : 1,
+  //     sort   : {_id: -1},
+  //     project: {_id: 1}
+  //   });
+  // co(function (err, rres) {
+  //   console.log(rres);
+  // });
 
   // var co = ezmongo.deleteOne('test');
   // co(function (err, rres) {
